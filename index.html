@@ -4,10 +4,10 @@
     <script src="/static/uv/uv.bundle.js" defer></script>
     <script src="/static/uv/uv.config.js" defer></script>
     <script src="/static/register-sw.js" defer></script>
-    <meta property="og:title" content="Nexus | Home">
-    <meta property="og:description" content="Search the web freely, watch your favorite movies and shows, and play your favorite gаmes with nexus.">
+    <meta property="og:title" content="chromebook | Home">
+    <meta property="og:description" content="Search the web freely, watch your favorite movies and shows, and play your favorite gаmes with chromebook.">
     <meta property="og:image" content="/storage/images/logo.png">
-    <meta name="keywords" content="nexus">
+    <meta name="keywords" content="chromebook">
     <link rel="manifest" href="manifest.json">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -263,7 +263,7 @@
         </button>
       </div>
       <div class="search-bar-container">
-        <input type="text" id="search-input" value="nexus://new-tab-page" class="search-bar" placeholder="Search or enter a URL">
+        <input type="text" id="search-input" value="chromebook://new-tab-page" class="search-bar" placeholder="Search or enter a URL">
       </div>
       <div class="navbar-right">
         <button onclick="openInAboutBlank()" class="nav-btn">
@@ -357,39 +357,39 @@
 
       function internal(url) {
         try {
-          if (url.startsWith('nexus://games-frame')) {
-            const path = url.replace('nexus://', '/pages/');
+          if (url.startsWith('chromebook://games-frame')) {
+            const path = url.replace('chromebook://', '/pages/');
             return setIframe(path, 'Games');
           }
-          if (url.startsWith('nexus://apps-frame')) {
-            const path = url.replace('nexus://', '/pages/');
+          if (url.startsWith('chromebook://apps-frame')) {
+            const path = url.replace('chromebook://', '/pages/');
             return setIframe(path, 'Apps');
           }
-          if (url === 'nexus://secret') {
+          if (url === 'chromebook://secret') {
             return setIframe('/pages/secret', 'super-secret');
          }
           switch (url) {
-            case 'nexus://new-tab-page':
+            case 'chromebook://new-tab-page':
               return setIframe('/static/?upd=', 'New Tab');
-            case 'nexus://settings':
+            case 'chromebook://settings':
               return setIframe('/pages/prox/settings?upd=', 'Settings');
-            case 'nexus://games':
+            case 'chromebook://games':
               return setIframe('/pages/games?upd=', 'Games');
-            case 'nexus://media':
+            case 'chromebook://media':
               return setIframe('/pages/heartive?upd=', 'Media');
-            case 'nexus://apps':
+            case 'chromebook://apps':
               return setIframe('/pages/apps?upd=', 'Apps');
-            case 'nexus://partners':
+            case 'chromebook://partners':
               return setIframe('/pages/partners?upd=', 'Partners');
-            case 'nexus://credits':
+            case 'chromebook://credits':
               return setIframe('/pages/credits?upd=', 'Credits');
-            case 'nexus://extra':
+            case 'chromebook://extra':
               return setIframe('/pages/extra?upd=', 'Extra');
-            case 'nexus://data':
+            case 'chromebook://data':
               return setIframe('/pages/data?upd=', 'Data');
-            case 'nexus://data-usage':
+            case 'chromebook://data-usage':
               return setIframe('/pages/extra/data-use', 'Data Usage');
-            case 'nexus://secret':
+            case 'chromebook://secret':
               return setIframe('/pages/secret', 'super-secret');
           }
         } catch (e) {
@@ -487,34 +487,34 @@
           }
           if (docHref.includes("/pages/games-frame") || docHref.includes("/pages/apps-frame")) {
             const remaining = docHref.replace(`https://${hostname}/pages/`, "");
-            return `nexus://${remaining}`;
+            return `chromebook://${remaining}`;
           }
           switch (docHref) {
             case `https://${hostname}/static/`:
-              return "nexus://new-tab-page";
+              return "chromebook://new-tab-page";
             case `https://${hostname}/pages/prox/settings`:
-              return "nexus://settings";
+              return "chromebook://settings";
             case `https://${hostname}/pages/games?upd=`:
-              return "nexus://games";
+              return "chromebook://games";
             case `https://${hostname}/pages/heartive?upd=`:
-              return "nexus://media";
+              return "chromebook://media";
             case `https://${hostname}/pages/apps?upd=`:
-              return "nexus://apps";
+              return "chromebook://apps";
             case `https://${hostname}/pages/partners?upd=`:
-              return "nexus://partners";
+              return "chromebook://partners";
             case `https://${hostname}/pages/credits?upd=`:
-              return "nexus://credits";
+              return "chromebook://credits";
             case `https://${hostname}/pages/extra?upd=`:
-              return "nexus://extra";
+              return "chromebook://extra";
             case `https://${hostname}/pages/data?upd=`:
-              return "nexus://data";
+              return "chromebook://data";
             case `https://${hostname}/pages/extra/data-use`:
-              return "nexus://data-usage";
+              return "chromebook://data-usage";
             case `https://${hostname}/pages/secret`:
             case `https://${hostname}/pages/secret/`:
-              return "nexus://secret";
+              return "chromebook://secret";
             case `https://${hostname}/storage/images/cheese.png`:
-              return "nexus://cheese.png";
+              return "chromebook://cheese.png";
             default:
               if (docHref.startsWith(hostPrefix)) {
                 return decodeURI(docHref.replace(hostPrefix, ""));
@@ -555,7 +555,7 @@
               try {
                 host = new URL(__uv$config.decodeUrl(path));
               } catch {
-                host = new URL("https://voucan-nexus.github.io");
+                host = new URL("https://voucan-chromebook.github.io");
               }
               const faviconUrl = `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${host.hostname}&size=24`;
               let title = '';
