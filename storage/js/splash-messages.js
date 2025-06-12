@@ -10,14 +10,14 @@ const phrases = [
     `i accidentally muted the teacher`,
     `my homework ate my dog`,
     `late to class again`,
-    `now with MORE html`,
+    `now with MORE`,
     `omg i better not get iss for this 😭`,
     `made at school`,
-    `made with javascript`,
+    `made with javascript 100%`,
     `thanks voucan`,
     `press ctrl+shift+q+q for free money`,
     `school. is. bad`,
-    `school lunch is mid`,
+    `ruffle on top`,
     `i dare you to rub a magnet on the side of your chromebook`,
     `bruh`,
     `we should be able to play football ⚽`,
@@ -39,6 +39,9 @@ const phrases = [
     `splash-messages.js`,
     `static proxy 😱 those who know 💀`,
     `who votes yt should be unblocked`,
+    `'my posture isnt even that bad'`,
+    `phonk is tuff in brazil `,
+    
 ];
 
 const paragraph = document.getElementById('dynamicParagraph');
